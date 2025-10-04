@@ -21,7 +21,7 @@
     </div>
 
     <ul class="navbar" id="navbar">
-     
+  
       <li><a href="./index.html">Home</a></li>
       <li><a href="#1">Works</a></li>
       <li><a href="#2">Skills</a></li>
@@ -52,40 +52,63 @@
   </a>
 </div>
 
-  <section class="main-section">
-    <h1>Hi, I'm Giorgi Motsonelidze — a Front-End Developer.</h1>
-    <p>I build fast, responsive, and modern web applications using HTML, CSS, JavaScript, and Angular.</p>
-  </section>
+<section class="main-section">
+  <h1 id="main-h1">Hi, I'm Giorgi Motsonelidze — a Front-End Developer.</h1>
+  <p id="main-p">I build fast, responsive, and modern web applications using HTML, CSS, JavaScript, and Angular.</p>
+  
+</section>
 
-  <section class="aboutme">
-    <h2>About Me</h2>
-    <p>I am a passionate front-end developer with a keen eye for design and a love for creating user-friendly web applications. My journey in web development has equipped me with the skills to build dynamic and responsive websites that provide an excellent user experience.</p>
-    
-    
-  </section>
+<section class="aboutme">
+  <h2 id="about-h2">About Me</h2>
+  <p id="about-p">I am a passionate front-end developer with a keen eye for design and a love for creating user-friendly web applications. My journey in web development has equipped me with the skills to build dynamic and responsive websites that provide an excellent user experience.</p>
+  
+</section>
+
+
 
 
 <section id="2" class="skills">
   <h2>Skills</h2>
   <div class="icons">
+    <!-- HTML -->
     <div class="skill-item">
       <i class="fa-brands fa-html5"></i>
       <p>HTML</p>
     </div>
+
+    <!-- CSS -->
     <div class="skill-item">
       <i class="fa-brands fa-css3-alt"></i>
       <p>CSS</p>
     </div>
+     <div class="skill-item">
+      <i class="fa-brands fa-css3-alt"></i>
+      <p>SCSS</p>
+    </div>
+
+    <!-- JavaScript -->
     <div class="skill-item">
       <i class="fa-brands fa-js"></i>
       <p>JavaScript</p>
     </div>
+
+    <!-- Angular -->
     <div class="skill-item">
       <i class="fa-brands fa-angular"></i>
       <p>Angular</p>
     </div>
+   <div class="skill-item">
+  <i class="fa-solid fa-code"></i>
+  <p>TypeScript</p>
+</div>
+    <!-- Tailwind -->
+    <div class="skill-item">
+      <i class="fa-brands fa-html5"></i>
+      <p>Tailwind</p>
+    </div>
   </div>
 </section>
+
 
 
 <section id="1" class="works">
@@ -156,6 +179,7 @@
 <div id="3" class="Contact">
   <h2>Contact Me</h2>
   <p>If you have any questions or would like to collaborate, feel free to reach out!</p>
+   
   
   <form
   action="https://formspree.io/f/xqaylkwb"
@@ -179,7 +203,76 @@
     const navbar = document.getElementById('navbar');
     navbar.classList.toggle('active');
   }
+  // ღილაკის მიღება
+const darkModeBtn = document.querySelector('.dark');
+const overlay = document.querySelector('.dark-overlay');
+
+darkModeBtn.addEventListener('click', () => {
+    // გადართვა ON/OFF
+    if(overlay.style.opacity === '1') {
+        overlay.style.opacity = '0';
+        darkModeBtn.textContent = "Dark Mode";
+    } else {
+        overlay.style.opacity = '1';
+        darkModeBtn.textContent = "Light Mode";
+    }
+});
+
+
+// აიღეთ ყველა Translate button
+// ყველა Translate button
+// ტექსტების მეპირება (ინგლისური ↔ ქართული)
+const translations = {
+  main: {
+    h1: {
+      en: "Hi, I'm Giorgi Motsonelidze — a Front-End Developer.",
+      ge: "გამარჯობა, მე გიორგი მოწონელიძე ვარ — Front-End დეველოპერი."
+    },
+    p: {
+      en: "I build fast, responsive, and modern web applications using HTML, CSS, JavaScript, and Angular.",
+      ge: "მე ვაშენებ სწრაფ, რესპონსიურ და თანამედროვე ვებ აპლიკაციებს HTML, CSS, JavaScript და Angular-ის გამოყენებით."
+    }
+  },
+  about: {
+    h2: {
+      en: "About Me",
+      ge: "ჩემ შესახებ"
+    },
+    p: {
+      en: "I am a passionate front-end developer with a keen eye for design and a love for creating user-friendly web applications. My journey in web development has equipped me with the skills to build dynamic and responsive websites that provide an excellent user experience.",
+      ge: "მე ვარ ენთუზიაზმით სავსე front-end დეველოპერი, დიზაინის მზერის და მომხმარებელზე ორიენტირებული ვებ აპლიკაციების შექმნის სიყვარულით. ჩემი ვებ-დეველოპერის გზა მომცა უნარები დინამიური და რესპონსიური ვებსაიტების შექმნისთვის, რომლებიც უზრუნველყოფენ საუკეთესო მომხმარებლის გამოცდილებას."
+    }
+  }
+};
+
+// ყველა Translate button
+const buttons = document.querySelectorAll('.tr');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.target; // main ან about
+    const section = translations[target];
+
+    // ამოწმებს, რომ ახლა ქართულია თუ ინგლისური
+    const currentH1 = document.getElementById(target + '-h1') || document.getElementById(target + '-h2');
+    const isGe = currentH1 && currentH1.textContent === (section.h1 ? section.h1.ge : section.h2.ge);
+
+    // ტექსტების შეცვლა
+    if (target === 'main') {
+      document.getElementById('main-h1').textContent = isGe ? section.h1.en : section.h1.ge;
+      document.getElementById('main-p').textContent = isGe ? section.p.en : section.p.ge;
+    } else if (target === 'about') {
+      document.getElementById('about-h2').textContent = isGe ? section.h2.en : section.h2.ge;
+      document.getElementById('about-p').textContent = isGe ? section.p.en : section.p.ge;
+    }
+
+    // ღილაკის ტექსტი
+    btn.textContent = isGe ? "ნახე ქართულად" : "See in English";
+  });
+});
+
 </script>
+<div class="dark-overlay"></div>
 <!-- ✅ reCAPTCHA სკრიპტი -->
 
 
@@ -206,5 +299,6 @@
     </div>
 </footer> -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="app.js"></script>
 </body>
 </html>
