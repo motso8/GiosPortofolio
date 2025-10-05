@@ -804,3 +804,46 @@ button.tr:active {
     transform: translateY(0);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
+.ach {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.ach h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+.certipor {
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.certipor:hover {
+  transform: scale(1.05);
+}
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  text-decoration: none;
+  background-color: #1e88e5;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.download-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.download-btn:hover {
+  background-color: #1565c0;
+}
