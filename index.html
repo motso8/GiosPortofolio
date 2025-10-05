@@ -6,7 +6,8 @@
     <img src="" alt="" srcset="">
     <title>Giorgi Motsonelidze</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -20,11 +21,14 @@
       <div></div>
     </div>
 
-    <ul class="navbar" id="navbar">
+    <ul class="navbar" data-aos="fade-up" id="navbar">
   
       <li><a href="./index.html">Home</a></li>
       <li><a href="#1">Works</a></li>
       <li><a href="#2">Skills</a></li>
+      <li><a href="#4">Achievements</a></li>
+      <li><a href="#6">Education</a></li>
+      <li><a href="#5">Services</a></li>
       <li><a href="#3">Contact</a></li>
     </ul>
   </div>
@@ -40,7 +44,7 @@
   
 
 
-    <div class="links">
+    <div data-aos="fade-left" class="links">
   <a href="https://github.com/motso8" target="_blank">
     <i class="fa-brands fa-github"></i>
   </a>
@@ -52,13 +56,13 @@
   </a>
 </div>
 
-<section class="main-section">
+<section data-aos="fade-up" class="main-section">
   <h1 id="main-h1">Hi, I'm Giorgi Motsonelidze — a Front-End Developer.</h1>
   <p id="main-p">I build fast, responsive, and modern web applications using HTML, CSS, JavaScript, and Angular.</p>
   
 </section>
 
-<section class="aboutme">
+<section data-aos="fade-down" class="aboutme">
   <h2 id="about-h2">About Me</h2>
   <p id="about-p">I am a passionate front-end developer with a keen eye for design and a love for creating user-friendly web applications. My journey in web development has equipped me with the skills to build dynamic and responsive websites that provide an excellent user experience.</p>
   
@@ -67,42 +71,42 @@
 
 
 
-<section id="2" class="skills">
-  <h2>Skills</h2>
+<section data-aos="fade-up" id="2" class="skills">
+  <h2 data-aos="fade-up">Skills</h2>
   <div class="icons">
     <!-- HTML -->
     <div class="skill-item">
       <i class="fa-brands fa-html5"></i>
-      <p>HTML</p>
+      <p data-aos="fade-up">HTML</p>
     </div>
 
     <!-- CSS -->
     <div class="skill-item">
       <i class="fa-brands fa-css3-alt"></i>
-      <p>CSS</p>
+      <p data-aos="fade-up">CSS</p>
     </div>
      <div class="skill-item">
       <i class="fa-brands fa-css3-alt"></i>
-      <p>SCSS</p>
+      <p data-aos="fade-up">SCSS</p>
     </div>
 
     <!-- JavaScript -->
     <div class="skill-item">
       <i class="fa-brands fa-js"></i>
-      <p>JavaScript</p>
+      <p data-aos="fade-up">JavaScript</p>
     </div>
 
     <!-- Angular -->
-    <div class="skill-item">
+    <div  data-aos="fade-up"class="skill-item">
       <i class="fa-brands fa-angular"></i>
       <p>Angular</p>
     </div>
-   <div class="skill-item">
+   <div data-aos="fade-up" class="skill-item">
   <i class="fa-solid fa-code"></i>
   <p>TypeScript</p>
 </div>
     <!-- Tailwind -->
-    <div class="skill-item">
+    <div data-aos="fade-up" class="skill-item">
       <i class="fa-brands fa-html5"></i>
       <p>Tailwind</p>
     </div>
@@ -111,8 +115,8 @@
 
 
 
-<section id="1" class="works">
-  <h2>Works</h2>
+<section data-aos="fade-up" id="1" class="works">
+  <h2> Works</h2>
  
 <h3>CanvasCraft </h3>
   <div class="project">
@@ -172,25 +176,64 @@
   </div>
 </section>
 
+<div id="4" data-aos="fade-up" class="ach">
+  <h2 >Achievements</h2>
 
-<div class="ach">
-  <h2>Achievements</h2>
-
-  <!-- სერთიფიკატის სურათი -->
-  <a href="./Front-End Cert (1).pdf" download>
-    <img class="certipor" src="./cer.jpeg" alt="Front-End Certificate">
-  </a>
-
-  <!-- ჩამოტვირთვის ღილაკი ლოგოთი -->
-  <a class="download-btn" href="./Front-End Cert (1).pdf" download>
-    <img src="./download-icon.png" alt="">
-    <span><i class="fa fa-download"></i></span>
-  </a>
+  <div class="certi-container">
+    <a href="./Front-End Cert (1).pdf" download>
+      <img class="certipor" src="./cer.jpeg" alt="Front-End Certificate">
+      <div class="overlay">
+       <span class="ss"> <i class="fa-solid fa-file-pdf"></i></span>
+      </div>
+    </a>
+  </div>
 </div>
-<!-- Google reCAPTCHA სკრიპტი უნდა ჩასვა head-ში ან body-ს ბოლოში -->
 
+<div id="6" class="education" data-aos="fade-up">
+  <h2>Education</h2>
 
-<div id="3" class="Contact">
+  <div class="edu-card">
+    <h3><a href="https://r.search.yahoo.com/_ylt=AwrEszTlxeJoOAIALqRXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1760901862/RO=10/RU=https%3a%2f%2fge.itstep.org%2f/RK=2/RS=wgsQQ.ZzHeMAR9fQSkYxjq5p_2E-">IT Step Academy</a></h3>
+    <p><strong>Front-End Development</strong> — Completed</p>
+    <p><strong>Back-End Development</strong> — Currently Studying</p>
+    <p class="year">2024 – Present</p>
+  </div>
+
+  <div class="edu-note">
+    <p>
+      I started my journey at <strong>IT Step Academy</strong> where I mastered
+      <strong>HTML, CSS, JavaScript, and Angular</strong>.  
+      Currently, I’m expanding my skills in <strong>Back-End Development</strong> to become a full-stack developer.
+    </p>
+  </div>
+</div>
+
+<div id="5" class="services">
+  <h2 data-aos="fade-up">Services</h2>
+  <div class="service-cards">
+
+    <div data-aos="fade-up" data-aos-delay="100" class="service-card">
+      <i class="fa-solid fa-code"></i>
+      <h3>Web Development</h3>
+      <p>I create responsive and dynamic websites using modern technologies like HTML, CSS, JavaScript, and Angular.</p>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="200" class="service-card">
+      <i class="fa-solid fa-paintbrush"></i>
+      <h3>Design</h3>
+      <p>I design user-friendly interfaces that provide an excellent user experience, ensuring your website is both functional and visually appealing.</p>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="300" class="service-card">
+      <i class="fa-solid fa-mobile-screen-button"></i>
+      <h3>Responsive Design</h3>
+      <p>I ensure that your website looks great and functions well on all devices, from desktops to smartphones.</p>
+    </div>
+
+  </div>
+</div>
+
+<div data-aos="fade-up" id="3" class="Contact">
   <h2>Contact Me</h2>
   <p>If you have any questions or would like to collaborate, feel free to reach out!</p>
    
@@ -287,31 +330,12 @@ buttons.forEach(btn => {
 
 </script>
 <div class="dark-overlay"></div>
-<!-- ✅ reCAPTCHA სკრიპტი -->
-
-
-
-<!-- ✅ reCAPTCHA script -->
-
-
-
-<!-- <footer>
-    <p>&copy; 2023 Giorgi Motsonelidze. All rights reserved.</p>
-    
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/giorgi-motsonelidze-011bb6346"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/gio.motsonelidze.92"><i class="fa-brands fa-facebook"></i></a>
-    </div>
-    
-    <p>Designed by Giorgi Motsonelidze</p>
-    
-    <div class="contact">
-       <p>Contact Me:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=gmotsonelidze10@gmail.com" target="_blank">
-  gmotsonelidze10@gmail.com
-</a>
-</p>
-    </div>
-</footer> -->
+<script>
+  AOS.init({
+    duration: 900,  // ანიმაციის ხანგრძლივობა
+    once: true,     // ერთხელ რომ იმუშაოს
+  });
+</script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="app.js"></script>
 </body>

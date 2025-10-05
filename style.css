@@ -765,6 +765,12 @@ body.night {
   .skills .skill-item p {
     font-size: 0.9rem;
   }
+   .ach{
+    width: auto;
+  }
+  .ach img{
+    width: 80%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -779,7 +785,9 @@ body.night {
   .skills .skill-item p {
     font-size: 0.8rem;
   }
+ 
 }
+
 button.tr {
     padding: 10px 20px;
     background-color: #004488; /* primary button color */
@@ -846,4 +854,158 @@ button.tr:active {
 
 .download-btn:hover {
   background-color: #1565c0;
+}
+.ach {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.certi-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.certipor {
+  width: 500px;
+  height: auto;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* ჰოვერისას სურათი ოდნავ განაცისფრდეს */
+.certi-container:hover .certipor {
+  filter: brightness(70%);
+  transform: scale(1.03);
+}
+
+/* ზედმოდან ამომავალი overlay */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.certi-container:hover .overlay {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  opacity: 0.9;
+}
+.ss{
+  font-size: 35px;
+  color: #004488;
+}
+
+
+.education {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 800px;
+  
+}
+
+.education h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.edu-card {
+  background: #f3f6ff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+}
+
+.edu-card a {
+  color: #004488;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.edu-card a:hover {
+  text-decoration: underline;
+}
+.edu-card .year {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.edu-note {
+  margin-top: 15px;
+  color: #333;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+.services {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #f9fbff 0%, #eef3ff 100%);
+}
+
+.services h2 {
+  font-size: 2.3em;
+  color: #333;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  padding: 35px 25px;
+  width: 300px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+.service-card i {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: #002266;
+}
+
+.service-card p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .service-card {
+    width: 90%;
+  }
 }
